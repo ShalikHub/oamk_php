@@ -12,33 +12,33 @@
  <td colspan="2"><?php echo @$error; ?></td>
  </tr>
   <tr>
-    <td width="230">Enter Your Name </td>
+    <td width="230">Name </td>
     <td width="329"><input type="text" name="name"/></td>
   </tr>
 
   <tr>
-    <td>Enter Your Email </td>
+    <td>Email </td>
     <td><input type="text" name="email"/></td>
   </tr>
 
   <tr>
-    <td>Enter Your Password </td>
+    <td>Password </td>
     <td><input type="password" name="pass"/></td>
   </tr>
 
   <tr>
-    <td>Enter Your Mobile </td>
+    <td>Mobile </td>
     <td><input type="text" name="mobile"/></td>
   </tr>
 
   <tr>
-    <td>Select Your Course </td>
+    <td>Course </td>
     <td>
  <select name="course">
- <option value="">Select Course</option>
- <option>PHP</option>
- <option>Java</option>
- <option>Wordpress</option>
+ <option value="">Course you like to take</option>
+ <option>geography</option>
+ <option>politics</option>
+ <option>mathematics</option>
  </select>
  </td>
   </tr>
