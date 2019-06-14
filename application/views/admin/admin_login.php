@@ -11,7 +11,7 @@
     <?php
     }
     ?>
-    <form class="form-horizontal" action="<?php echo base_url('login/admin_login'); ?>" method="post">
+    <form class="form-horizontal" action="<?php echo base_url('admin/admin_login'); ?>" method="post">
         <div class="form-group">
             <span> <?php echo form_error('username',"<span class='text-danger'>","</span>"); ?> </span>
             <label for="inputEmail" class="col-lg-2 control-label">Email</label>

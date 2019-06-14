@@ -3,6 +3,13 @@
 <html>
 <head>
 <title>Login form</title>
+
+<style type="text/css">
+body{
+  background-color: #3EB650;
+}
+</style>
+
 </head>
 
 <body>

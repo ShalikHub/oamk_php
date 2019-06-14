@@ -6,6 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin Panel</title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
+        <style type="text/css">
+        body{
+          background-color: #3EB650;
+        }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-inverse">
