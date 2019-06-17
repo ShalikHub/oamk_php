@@ -9,6 +9,10 @@ class Question extends CI_Controller{
       $this->load->view('admin_login');
 
     }
+  public function __construct(){
+
+    $this->load->database();
+  }
 
     public function Question()
     {
@@ -17,7 +21,7 @@ class Question extends CI_Controller{
       echo '<pre>';
           print_r($records);
       echo '<pre>'
-      $this->load->view('admin/dashboard', ['records'=>$records])
+      $this->load->view('admin/dashboard', ['records'])
    }
   }
 }
