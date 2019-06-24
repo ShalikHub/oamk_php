@@ -46,7 +46,7 @@
   <tr>
     <td colspan="2" align="center">
  <input type="submit" name="register" value="Register Me"/></td>
- <span class="float-center"><a href="<?= base_url() . 'user'; ?>" class="btn btn-primary">Login</a></span>
+ <span class="float-center"><a href="<?= base_url() . 'index.php/user/login'; ?>" class="btn btn-primary">Login</a></span>
   </tr>
 </table>
 
