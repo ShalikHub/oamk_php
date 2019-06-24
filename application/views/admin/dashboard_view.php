@@ -17,19 +17,19 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">navigation</span>
                         <span class="icon-bar">home</span>
                         <span class="icon-bar">menu exam</span>
-                        <span class="icon-bar"></span>
+                        <span class="icon-bar">create exam</span>
                     </button>
-                    <a class="navbar-brand" href="#">Admin Panel</a>
+                    <a class="navbar-brand" href="admin">Admin Panel</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
+                        <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
                     </ul>
                 </div>
             </div>
