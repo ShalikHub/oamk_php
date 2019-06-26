@@ -10,6 +10,26 @@
         body{
           background-color: #3EB650;
         }
+
+        li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
         </style>
     </head>
     <body>
@@ -17,10 +37,12 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">navigation</span>
-                        <span class="icon-bar">home</span>
-                        <span class="icon-bar">menu exam</span>
-                        <span class="icon-bar">create exam</span>
+                      <ul>
+                        <li><a href="home">home</span>
+                        <li><a href="home">exam menu</span>
+                        <li><a href="exam menu">create exam</span>
+                        <li><a href="about">about</span>
+                      </ul>
                     </button>
                     <a class="navbar-brand" href="admin">Admin Panel</a>
                 </div>
