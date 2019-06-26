@@ -33,6 +33,11 @@ ul {
         </style>
     </head>
     <body>
+      <div class="container">
+      <h1> Welcome In Admin Dashboard</h1>
+      </div>
+
+
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -57,9 +62,7 @@ ul {
             </div>
         </nav>
 
-<div class="container">
-<h1> Welcome In Admin Dashboard</h1>
-</div>
+
         <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
     </body>
