@@ -43,7 +43,7 @@ ul {
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                       <ul>
-                        <li><a href="home">home</span>
+                        <li><a href="dashboard_view.php">home</span>
                         <li><a href="home">exam menu</span>
                         <li><a href="exam menu">create exam</span>
                         <li><a href="about">about</span>
@@ -56,7 +56,7 @@ ul {
 
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="<?php echo base_url('logout'); ?>">Logout</a></li>
+                        <li><a href="<?php echo base_url ('logout'); ?>">Logout</a></li>
                     </ul>
                 </div>
             </div>
