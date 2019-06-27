@@ -46,7 +46,7 @@ ul {
                         <li><a href="dashboard_view.php">home</span>
                         <li><a href="home">exam menu</span>
                         <li><a href="exam menu">create exam</span>
-                        <li><a href="about">about</span>
+                        <li><a href="about.php">about</span>
                       </ul>
                     </button>
                     <a class="navbar-brand" href="admin">Admin Panel</a>
