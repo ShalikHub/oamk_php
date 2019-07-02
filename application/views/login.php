@@ -34,5 +34,6 @@ body{
 </table>
 
  </form>
+ <span class="float-center"><a href="<?= base_url() . 'index.php/user/index'; ?>" class="btn btn-primary"><h1>you haven't an account yet? click here to register <h1></a></span>
 </body>
 </html>
