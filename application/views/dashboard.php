@@ -25,10 +25,14 @@ body{
 <body>
  <h1>Welcome to your dashboard...</h1>
 
+ <div>
+		<button type="button">START</button>
+	 </div>
+
  <div class="container">
 	<div class="row">
 		<form method="post" class="form-horizontal col-md-6 col-md-offset-3" action="">
-		<h2>Create Operation in CodeIgniter - CRUD Application</h2>
+		<h2>multiple choice exam application</h2>
 			<div class="form-group">
 			    <label for="input1" class="col-sm-2 control-label">question_id</label>
 			    <div class="col-sm-10">
@@ -46,17 +50,17 @@ body{
 
 
 			<div class="form-group" class="radio">
-			<label for="input1" class="col-sm-2 control-label">choose your answer</label>
+			<label for="input1" class="col-sm-2 control-label">options</label>
 			<div class="col-sm-10">
 			  <label>
-			    <input type="radio" name="gender" id="optionsRadios1" value="male" checked> choice 1
+			    <input type="text" name="choice1" class="form-control" id="input1" > choice 1
 			  </label>
 			  	  <label>
-			    <input type="radio" name="gender" id="optionsRadios1" value="female"> choice 2
+			    <input type="text" name="choice2" class="form-control" id="input1"> choice 2
 			  </label>
 
         <label>
-      <input type="radio" name="gender" id="optionsRadios1" value="female"> choice 3
+      <input type="text" name="choice3"  class="form-control" id="input1"> choice 3
     </label>
 			</div>
 			</div>
