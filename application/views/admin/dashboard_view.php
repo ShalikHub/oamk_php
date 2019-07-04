@@ -56,7 +56,7 @@ ul {
 
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="<?php echo base_url ('logout'); ?>">Logout</a></li>
+                        <li><a href="<?php echo base_url ('index.php/admin/logout'); ?>">Logout</a></li>
                     </ul>
                 </div>
             </div>

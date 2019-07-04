@@ -11,5 +11,6 @@ class Dashboard extends Admin_Controller
   public function index()
   {
     $this->load->view('admin/dashboard_view');
+    //$this->load->view('admin/logout');
   }
 }

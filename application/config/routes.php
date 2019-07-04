@@ -56,6 +56,7 @@ $route['admin'] = 'admin/dashboard';
 $route['admin'] = 'admin/admin_login';
 $route['admin'] = 'admin/admin_registration';
 $route['admin/Exam'] = 'admin/Exam';
+$route['admin/logout'] = 'admin/logout';
 $route['Exam/(:any)'] = 'Exam/view/$1';
 $route['Exam'] = 'Exam';
 $route['(:any)'] = 'pages/view/$1';
