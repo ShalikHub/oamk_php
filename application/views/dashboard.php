@@ -34,7 +34,7 @@ body{
 		<form method="post" class="form-horizontal col-md-6 col-md-offset-3" action="">
 		<h2>multiple choice exam application</h2>
 			<div class="form-group">
-			    <label for="input1" class="col-sm-2 control-label">question_id</label>
+			    <label for="input1" class="col-sm-2 control-label">question categories</label>
 			    <div class="col-sm-10">
 			      <input type="number" name="id"  class="form-control" id="input1" placeholder="question_id" />
 			    </div>
@@ -49,7 +49,7 @@ body{
 
 
 
-			<div class="form-group" class="radio">
+			<div class="form-group" class="form-group">
 			<label for="input1" class="col-sm-2 control-label">options</label>
 			<div class="col-sm-10">
 			  <label>
@@ -64,6 +64,13 @@ body{
     </label>
 			</div>
 			</div>
+
+    <div class="form-group">
+      <label>
+    <input type="text" name="answer"  class="form-control" id="input1"> Answer</label>
+    <div class="col-sm-10">
+
+    </div>
 
 			<div class="form-group">
 
