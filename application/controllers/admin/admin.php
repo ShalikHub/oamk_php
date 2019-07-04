@@ -1,6 +1,5 @@
-
 <?php
-class User extends CI_Controller
+class Admin extends CI_Controller
 {
  public function __construct()
  {
@@ -17,10 +16,9 @@ class User extends CI_Controller
  $n=$this->input->post('name');
  $e=$this->input->post('email');
  $p=$this->input->post('pass');
- $m=$this->input->post('mobile');
- $c=$this->input->post('course');
 
- $que=$this->db->query("select * from student where email='".$e."'");
+
+ $que=$this->db->query("select * from admin where email='".$e."'");
  $row = $que->num_rows();
  if($row)
  {
@@ -28,13 +26,13 @@ class User extends CI_Controller
  }
  else
  {
- $que=$this->db->query("insert into student values('','$n','$e','$p','$m','$c')");
+ $que=$this->db->query("insert into admin values('','$n','$e','$p')");
 
  $data['error']="<h3 style='color:blue'>Your account created successfully</h3>";
  }
 
  }
- $this->load->view('student_registration',@$data);
+ $this->load->view('admin_registration',@$data);
  }
 
 
@@ -46,18 +44,18 @@ if($this->input->post('login'))
 $e=$this->input->post('email');
 $p=$this->input->post('pass');
 
-$que=$this->db->query("select * from student where email='".$e."' and password='$p'");
+$que=$this->db->query("select * from admin where email='".$e."' and password='$p'");
 $row = $que->num_rows();
 if($row)
 {
-redirect('user/dashboard');
+redirect('admin/dashboard');
 }
 else
 {
 $data['error']="<h3 style='color:red'>Invalid login details</h3>";
 }
 }
-$this->load->view('login',@$data);
+$this->load->view('admin_login',@$data);
 }
 
 function dashboard()
