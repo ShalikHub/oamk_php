@@ -1,6 +1,6 @@
 <h2><?php echo $title; ?></h2>
 
-<?php echo validation_errors(); ?>
+#<?php echo validation_errors(); ?>
 
 <?php echo form_open('admin/Exam'); ?>
 
@@ -9,7 +9,7 @@
 
     <label for="text">question</label>
     <textarea name="text"></textarea><br />
-    
+
     <p> please select your answer:</p>
 
     <input type="radio" name="age" value="30"> 0 - 30<br>

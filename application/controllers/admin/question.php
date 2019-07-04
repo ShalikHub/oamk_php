@@ -1,6 +1,11 @@
 <<?php
 class Question extends CI_Controller{
 
+  function __construct() {
+		parent::__construct();
+		$this->load->database();
+	}
+
   public function index() {
 
       if ($this->session->userdata('user_id'))
@@ -9,21 +14,6 @@ class Question extends CI_Controller{
       $this->load->view('admin_login');
 
     }
-  public function __construct(){
-
-    $this->load->database();
-  }
-
-    public function Question()
-    {
-      $this->load->model('Question')
-      $records = $this->Question->Create_questions();
-      echo '<pre>';
-          print_r($records);
-      echo '<pre>'
-      $this->load->view('admin/dashboard', ['records'])
-   }
-  }
-}
+  
 
  ?>
