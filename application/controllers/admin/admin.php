@@ -8,7 +8,7 @@ class Admin extends CI_Controller
  $this->load->helper('url');
  }
 
- public function index()
+ public function admin_register()
  {
 
  if($this->input->post('register'))
@@ -32,19 +32,19 @@ class Admin extends CI_Controller
  }
 
  }
- $this->load->view('admin_registration',@$data);
+ $this->load->view('admin/admin_registration',@$data);
  }
 
 
-public function login()
+public function admin_login()
 {
 
 if($this->input->post('login'))
 {
-$e=$this->input->post('email');
-$p=$this->input->post('pass');
+$e=$this->input->post('admin_name');
+$p=$this->input->post('admin_password');
 
-$que=$this->db->query("select * from admin where email='".$e."' and password='$p'");
+$que=$this->db->query("select * from admin where admin_name='".$e."' and admin_password='$p'");
 $row = $que->num_rows();
 if($row)
 {
@@ -55,7 +55,7 @@ else
 $data['error']="<h3 style='color:red'>Invalid login details</h3>";
 }
 }
-$this->load->view('admin_login',@$data);
+$this->load->view('admin/admin_login',@$data);
 }
 
 function dashboard()

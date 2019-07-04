@@ -4,7 +4,9 @@ class User extends CI_Controller
 {
  public function __construct()
  {
+
  parent::__construct();
+ $session = $this->session->userdata('is_loggged_in');
  $this->load->database();
  $this->load->helper('url');
  }
@@ -62,7 +64,7 @@ $this->load->view('login',@$data);
 
 function dashboard()
 {
-$this->load->view('admin/dashboard');
+$this->load->view('dashboard');
 }
 }
 ?>

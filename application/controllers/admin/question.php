@@ -18,14 +18,14 @@ class Question extends CI_Controller{
 //validating question_id field
  if ($this->input->post('geography'))
 
- $i=$this->input->post('question_id');
+ //$i=$this->input->post('question_id');
  $q=$this->input->post('question');
  $c1=$this->input->post('choice1');
  $c2=$this->input->post('choice2');
  $c3=$this->input->post('choice3');
  $a=$this->input->post('answer');
 
- $que=$this->db->query("select * from geography where question_id='".$i."'");
+ $que=$this->db->query("select * from geography where question='".$q."'");
  $row = $que->num_rows();
 if($row)
 {
@@ -33,14 +33,14 @@ $data['error']="<h3 style='color:red'>This question already exists</h3>";
 }
 else
 {
-$que=$this->db->query("insert into student values('','$i','$q','$c1','$c2','$c3','$a')");
+$que=$this->db->query("insert into geography values('','$i','$q','$c1','$c2','$c3','$a')");
 $data['error']="<h3 style='color:blue'>Your question created successfully</h3>";
 }
 }
 $this->load->view('admin/question.php',@$data);
 }
 
-function dashboard()
+public function dashboard()
 {
 $this->load->view('dashboard');
 }

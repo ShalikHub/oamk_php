@@ -1,4 +1,4 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');?>
+
 <!>DOCTYPE html>
 <html>
 <head>
@@ -19,13 +19,13 @@ body{
  <td colspan="2"><?php echo @$error; ?></td>
  </tr>
   <tr>
-    <td>Enter Your Email </td>
-    <td><input type="text" name="email"/></td>
+    <td>Enter Your name </td>
+    <td><input type="text" name="admin_name"/></td>
  </tr>
 
  <tr>
     <td width="230">Enter Your Password </td>
-    <td width="329"><input type="password" name="pass"/></td>
+    <td width="329"><input type="password" name="admin_password"/></td>
   </tr>
    <tr>
     <td colspan="2" align="center">

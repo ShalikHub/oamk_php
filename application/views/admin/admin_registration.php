@@ -1,4 +1,4 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,17 +21,14 @@ body{
  </tr>
   <tr>
     <td width="230">Name </td>
-    <td width="329"><input type="text" name="name"/></td>
+    <td width="329"><input type="text" name="admin_name"/></td>
   </tr>
 
-  <tr>
-    <td>Email </td>
-    <td><input type="text" name="email"/></td>
-  </tr>
+
 
   <tr>
     <td>Password </td>
-    <td><input type="password" name="pass"/></td>
+    <td><input type="password" name="admin_password"/></td>
   </tr>
 
 
