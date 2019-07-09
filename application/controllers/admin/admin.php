@@ -6,6 +6,7 @@ class Admin extends CI_Controller
  parent::__construct();
  $this->load->database();
  $this->load->helper('url');
+ $this->load->model('Admin');
  }
 
  public function admin_register()

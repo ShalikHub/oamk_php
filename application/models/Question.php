@@ -8,7 +8,7 @@ class Questionmodel extends CI_Model {
 		return $query->result();
 		$num_data_returned = $query->num_rows;
 		if ($num_data_returned < 1) {
-		  echo "There is no data in the database";
+		  echo "here is your questions";
 		  exit();
 		}
 	}
