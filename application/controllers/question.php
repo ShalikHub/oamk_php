@@ -12,7 +12,7 @@ class Question extends CI_Controller{
       if ($this->session->userdata('user_id'))
           redirect(base_url('dashboard'));
       $this->load->helper('form');
-      $this->load->view('admin_login');
+      #$this->load->view('admin_login');
       $this->load->library('form_validation');
 
 
