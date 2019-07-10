@@ -1,22 +1,40 @@
-<h2><?php echo $title; ?></h2>
+<!doctype html>
+<html>
+ <body>
+   <form method='post' action='<?= base_url(); ?>'>
 
-<?php echo validation_errors(); ?>
+     <table>
+       <tr>
+         <td>question id</td>
+         <td><input type='number' name='txt_id'></td>
+       </tr>
+       <tr>
+         <td>question</td>
+         <td><input type='text' name='txt_question'></td>
+       </tr>
+       <tr>
+         <td>choice 1</td>
+         <td><input type='text' name='txt_choice1'></td>
+       </tr>
 
-<?php echo form_open('admin/Exam'); ?>
+       <tr>
+         <td>choice 2</td>
+         <td><input type='text' name='txt_choice2'></td>
+       </tr>
+       <tr>
+         <td>choice 3</td>
+         <td><input type='text' name='txt_choice3'></td>
+       </tr>
+       <tr>
+         <td>answer</td>
+         <td><input type='text' name='txt_answer'></td>
+       </tr>
+       <tr>
+         <td>&nbsp;</td>
+         <td><input type='submit' name='submit' value='Submit'></td>
+       </tr>
+    </table>
 
-    <label for="title">Title</label>
-    <input type="input" name="title" /><br />
-
-    <label for="text">question</label>
-    <textarea name="text"></textarea><br />
-
-    <p> please select your answer:</p>
-
-    <input type="radio" name="age" value="30"> 0 - 30<br>
-  <input type="radio" name="age" value="60"> 31 - 60<br>
-  <input type="radio" name="age" value="100"> 61 - 100<br>
-
-
-    <input type="submit" name="submit" value="Create a new exam" />
-
-</form>
+   </form>
+ </body>
+</html>

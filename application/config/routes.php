@@ -60,5 +60,6 @@ $route['admin/logout'] = 'admin/logout';
 $route['Exam/(:any)'] = 'Exam/view/$1';
 $route['Exam'] = 'Exam';
 $route['(:any)'] = 'pages/view/$1';
+$route['admin/question'] = 'question';
 #$route['default_controller'] = 'pages/view';
 #$route['admin'] = 'admin/about';

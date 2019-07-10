@@ -3,10 +3,11 @@ class Question extends CI_Controller{
 
   function __construct() {
 		parent::__construct();
-		$this->load->model(question);
+		#$this->load->model(question);
+    $this->load->database();
 	}
 
-  public function index() {
+  public function question() {
 
       if ($this->session->userdata('user_id'))
           redirect(base_url('dashboard'));
@@ -37,7 +38,7 @@ $que=$this->db->query("insert into geography values('','$i','$q','$c1','$c2','$c
 $data['error']="<h3 style='color:blue'>Your question created successfully</h3>";
 }
 }
-$this->load->view('admin/question.php',@$data);
+$this->load->view('question',@$data);
 }
 
 public function dashboard()

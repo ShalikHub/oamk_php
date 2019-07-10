@@ -1,26 +1,32 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-public function Exam(){
-    $this->load->helper('form');
-    $this->load->library('form_validation');
+class User extends CI_Controller {
 
-    $data['title'] = 'Create a Exam';
+ public function __construct() {
 
-    $this->form_validation->set_rules('title', 'Title', 'required');
-    $this->form_validation->set_rules('question', 'question', 'required');
+   parent::__construct();
 
-    if ($this->form_validation->run() === FALSE)
-    {
-        $this->load->view('templates/header', $data);
-        $this->load->view('admin/Exam');
-        $this->load->view('templates/footer');
+   // load base_url
+   $this->load->library('session');
+   $this->load->helper('url');
+ }
 
-    }
-    else
-    {
-        $this->news_model->set_news();
-        $this->load->view('admin/success');
-    }
+ public function index(){
+   $data = array();
+   // Check form submit or not
+   if($this->input->post('submit') != NULL ){
+
+     // POST data
+     $postData = $this->input->post();
+
+     $data['response'] = $postData;
+
+   }
+
+   // load view
+   $this->load->view('admin/Exam',$data);
+
+ }
+
 }
-
-?>
