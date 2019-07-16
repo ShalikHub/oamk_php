@@ -61,5 +61,13 @@ $route['Exam/(:any)'] = 'Exam/view/$1';
 $route['Exam'] = 'Exam';
 $route['(:any)'] = 'pages/view/$1';
 $route['admin/question'] = 'question';
+
+$route['examCRUD'] = "admin/exam/CRUD/index";
+$route['admin/examCRUD/(:num)'] = "admin/examCRUD/show/$1";
+#$route['examCRUDCreate']['post'] = "/store";
+$route['admin/examCRUDCreate']['post'] = "admin/examCRUD/store";
+$route['admin/examCRUDEdit/(:any)'] = "admin/examCRUD/edit/$1";
+$route['admin/examCRUDUpdate/(:any)']['put'] = "admin/examCRUD/update/$1";
+$route['admin/examCRUDDelete/(:any)']['delete'] = "admin/examCRUD/delete/$1";
 #$route['default_controller'] = 'pages/view';
 #$route['admin'] = 'admin/about';
