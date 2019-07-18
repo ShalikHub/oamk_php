@@ -21,7 +21,7 @@ class Loginmodel extends CI_Model {
         if ($q->num_rows) {
 
             return $q->row()->id;
-            //return TRUE .... ;
+              #return TRUE .... ;
         } else {
             return FALSE;
         }

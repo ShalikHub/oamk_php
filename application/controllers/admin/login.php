@@ -38,7 +38,7 @@ class Login extends CI_Controller {
             $login_id = $this->loginmodel->login_valid($username, $password);
             if ($login_id) {
                 $this->session->set_userdata('user_id', $login_id);
-                redirect(base_url('admin/dashboard'));
+                redirect(base_url('admin/dashboard_view'));
             } else {
 
                 $this->session->set_flashdata('login_failed', 'Invalid Username/Password');

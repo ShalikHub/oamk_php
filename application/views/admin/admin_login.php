@@ -18,12 +18,12 @@ body{
  <td colspan="2"><?php echo @$error; ?></td>
  </tr>
   <tr>
-    <td>Enter admin name </td>
+    <td>admin name </td>
     <td><input type="text" name="admin_name"/></td>
  </tr>
 
  <tr>
-    <td width="230">Enter admin password </td>
+    <td width="230">admin password </td>
     <td width="329"><input type="password" name="admin_password"/></td>
   </tr>
    <tr>
