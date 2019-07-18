@@ -38,7 +38,7 @@ body{
   <tr>
     <td colspan="2" align="center">
  <input type="submit" name="register" value="Register Me"/></td>
- <span class="float-center"><a href="<?= base_url() . 'index.php/admin/register'; ?>" class="btn btn-primary"><h1>you already have an account? click here to login <h1></a></span>
+ <span class="float-center"><a href="<?= base_url() . 'index.php/admin/login'; ?>" class="btn btn-primary"><h1>you already have an account? click here to login <h1></a></span>
   </tr>
 </table>
 
