@@ -33,6 +33,6 @@ body{
 </table>
 
  </form>
- <span class="float-center"><a href="<?= base_url() . 'index.php/admin/admin_login'; ?>" class="btn btn-primary"><h1>you haven't an account yet? click here to register <h1></a></span>
+ <span class="float-center"><a href="<?= base_url() . 'index.php/admin/admin_registration'; ?>" class="btn btn-primary"><h1>you haven't an account yet? click here to register <h1></a></span>
 </body>
 </html>

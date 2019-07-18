@@ -28,6 +28,30 @@ class Login extends CI_Controller {
         $this->load->view('admin/admin_login');
     }
 
+    Public function admin_register() {
+      $this->load->library('form_validation');
+      if ($this->form_validation->run(admin_registration)) {
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+
+        $this->load->model('loginmodel');
+        $login_id = $this->loginmodel->login_valid($username, $password);
+        if ($login_id) {
+            $this->session->set_userdata('user_id', $login_id);
+            redirect(base_url('admin/dashboard'));
+        } else {
+
+            $this->session->set_flashdata('login_failed', 'Invalid Username/Password');
+            redirect(base_url('login'));
+        }
+    } else {
+        $this->load->view('admin/admin_registration',@$data);
+    }
+}
+
+
+
+
     public function admin_login() {
         $this->load->library('form_validation');
         if ($this->form_validation->run('admin_login')) {
@@ -38,7 +62,7 @@ class Login extends CI_Controller {
             $login_id = $this->loginmodel->login_valid($username, $password);
             if ($login_id) {
                 $this->session->set_userdata('user_id', $login_id);
-                redirect(base_url('admin/dashboard_view'));
+                redirect(base_url('admin/dashboard'));
             } else {
 
                 $this->session->set_flashdata('login_failed', 'Invalid Username/Password');
