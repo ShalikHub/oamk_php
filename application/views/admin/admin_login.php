@@ -1,5 +1,4 @@
-
-<!>DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Login form</title>
@@ -19,12 +18,12 @@ body{
  <td colspan="2"><?php echo @$error; ?></td>
  </tr>
   <tr>
-    <td>Enter Your name </td>
+    <td>Enter admin name </td>
     <td><input type="text" name="admin_name"/></td>
  </tr>
 
  <tr>
-    <td width="230">Enter Your Password </td>
+    <td width="230">Enter admin password </td>
     <td width="329"><input type="password" name="admin_password"/></td>
   </tr>
    <tr>
@@ -34,6 +33,6 @@ body{
 </table>
 
  </form>
- <span class="float-center"><a href="<?= base_url() . 'index.php/admin/login'; ?>" class="btn btn-primary"><h1>you haven't an account yet? click here to register <h1></a></span>
+ <span class="float-center"><a href="<?= base_url() . 'index.php/admin/admin_login'; ?>" class="btn btn-primary"><h1>you haven't an account yet? click here to register <h1></a></span>
 </body>
 </html>

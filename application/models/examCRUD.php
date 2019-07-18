@@ -7,10 +7,10 @@ class examCRUDModel extends CI_Model{
     public function get_examCRUD()<?php
 
 
-class ItemCRUDModel extends CI_Model{
+class examCRUDModel extends CI_Model{
 
 
-    public function get_itemCRUD(){
+    public function get_examCRUD(){
         if(!empty($this->input->get("search"))){
           $this->db->like('title', $this->input->get("search"));
           $this->db->or_like('description', $this->input->get("search"));

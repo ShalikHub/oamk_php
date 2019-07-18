@@ -8,6 +8,11 @@
 
 class Loginmodel extends CI_Model {
 
+  function __construct() {
+        parent::__construct();
+        $this->load->database();
+    }
+
     public function login_valid($username, $password) {
 
         $password = md5($password);

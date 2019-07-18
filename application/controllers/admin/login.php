@@ -12,8 +12,11 @@ class Login extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
+        $session = $this->session->userdata('is_loggged_in');
+        $this->load->database();
         $this->load->library('session');
         $this->load->helper('url');
+        $this->load->model('Loginmodel');
     }
 
 
@@ -22,7 +25,7 @@ class Login extends CI_Controller {
         if ($this->session->userdata('user_id'))
             redirect(base_url('dashboard'));
         $this->load->helper('form');
-        $this->load->view('admin_login');
+        $this->load->view('admin/admin_login');
     }
 
     public function admin_login() {
@@ -42,7 +45,7 @@ class Login extends CI_Controller {
                 redirect(base_url('login'));
             }
         } else {
-            $this->load->view('admin_login');
+            $this->load->view('admin/admin_login',@$data);
         }
     }
 
