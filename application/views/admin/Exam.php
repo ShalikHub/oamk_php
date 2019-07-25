@@ -1,4 +1,3 @@
-<?php
 
 <!doctype html>
 <html>
@@ -28,7 +27,7 @@
          <td><input type='text' name='txt_answer'></td>
        </tr>
        <tr>
-         <td>&nbsp;</td>
+         <td>&nbsp;submit</td>
          <td><input type='submit' name='submit' value='Submit'></td>
        </tr>
     </table>
@@ -36,5 +35,3 @@
    </form>
  </body>
 </html>
-
-?>
