@@ -1,13 +1,11 @@
+<?php
+
 <!doctype html>
 <html>
  <body>
    <form method='post' action='<?= base_url(); ?>'>
 
      <table>
-       <tr>
-         <td>question id</td>
-         <td><input type='number' name='txt_id'></td>
-       </tr>
        <tr>
          <td>question</td>
          <td><input type='text' name='txt_question'></td>
@@ -38,3 +36,5 @@
    </form>
  </body>
 </html>
+
+?>
