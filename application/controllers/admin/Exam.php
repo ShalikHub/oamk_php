@@ -21,8 +21,11 @@ class Exam extends CI_Controller {
  public function exam_registration(){
    if ($this->input->post('exam_registration'))
    {
+     $this->db->select('*');
+     $this->db->from('geography');
      $data = array('txt_question' => $this->input->post('question'),'txt_choice1' => $this->input->post('choice1'),'txt_choice2' => $this->input->post('choice2'),'txt_choice3' => $this->input->post('choice3'),'txt_answer' => $this->input->post('answer'));
      $this->Exammodel->ExamRegistration($data);
+
      $que = $this->db->query('select * from geography');
      $row = $que->num_rows();
      if ($row)

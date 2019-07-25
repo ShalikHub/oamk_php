@@ -10,7 +10,7 @@ class Admin extends CI_Controller
  $this->load->model('Admin');
  }
 
- public function admin_register()
+ public function index()
  {
 
  if($this->input->post('register'))
