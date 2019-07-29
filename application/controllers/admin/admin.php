@@ -1,5 +1,6 @@
 
 <?php
+/*
 class Admin extends CI_Controller
 {
  public function __construct()
@@ -65,4 +66,5 @@ function dashboard()
 $this->load->view('admin/dashboard');
 }
 }
+*/
 ?>
