@@ -1,7 +1,8 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Exam extends CI_Controller {
+/*class Exam extends CI_Controller {
 
  public function __construct() {
 
@@ -10,8 +11,10 @@ class Exam extends CI_Controller {
    // load base_url
    $this->load->library('session');
    $this->load->helper('url');
+   $this->load->library('form_validation');
    //$this->load->helper('form');
    //$this->load->helper('form_validation');
+
 
    $this->load->database();
    $this->load->model('Exammodel');
@@ -25,13 +28,14 @@ class Exam extends CI_Controller {
    $data['records'] = $query->result();
    $this->load->helper('url');
    $this->load->view('admin/exam',$data);
+   //$this->load->library('form_validation');
 
 
  }
 
  public function exam_registration(){
 
- if ($this->input->post('exam_registration'))
+ if ($this->input->post('submit'))
    {
  $q=$this->input->post('question');
  $c1=$this->input->post('choice1');
@@ -50,7 +54,7 @@ class Exam extends CI_Controller {
        $data['error']="<h3 style='color:red'>This is invalid details</h3>";
      }
      else{
-       $que=$this->db->query("insert into geography values('','$q','$c1','$c2','$c3','$a')");
+       $que=$this->db->query("insert * into geography values('','$q','$c1','$c2','$c3','$a')");
 
        $data['error']="<h3 style='color:blue'>Your question created successfully</h3>";
      }
@@ -65,13 +69,40 @@ class Exam extends CI_Controller {
   $this->load->view('admin/exam',@$data);
 }
 
-*/
 
 
-
-   //$this->load->view('admin/Exam',@$data);
+  //$this->load->view('admin/exam',$data);
 
 
 }
+*/
+class Exam extends CI_Controller {
+
+        public function index()
+        {
+                $this->load->helper(array('form', 'url'));
+                $this->load->model('admin/Exammodel');
+
+                $this->load->library('form_validation');
+                $this->form_validation->set_rules('question', 'question', 'required');
+                $this->form_validation->set_rules('choice1', 'choice1', 'required');
+                $this->form_validation->set_rules('choice2', 'choice2', 'required');
+                $this->form_validation->set_rules('choice3', 'choice3', 'required');
+                $this->form_validation->set_rules('answer', 'answer', 'required');
+                //$this->form_validation->set_rules('username', 'Username', 'required');
+
+
+                if ($this->form_validation->run() == FALSE)
+                {
+                        $this->load->view('admin/exam');
+                }
+                else
+                {
+                        $this->load->view('admin/formsuccess');
+                }
+        }
+}
+
+
 
 ?>

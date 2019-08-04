@@ -62,6 +62,7 @@ $route['exam'] = 'exam';
 $route['(:any)'] = 'pages/view/$1';
 $route['admin/question'] = 'question';
 $route['admin/admin_login'] = 'admin/admin_login';
+$route['validation'] = 'Exam';
 
 $route['examCRUD'] = "admin/exam/CRUD/index";
 $route['admin/examCRUD/(:num)'] = "admin/examCRUD/show/$1";
