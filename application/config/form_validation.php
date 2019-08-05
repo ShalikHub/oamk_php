@@ -9,13 +9,16 @@ $config = [
                 'admin_login' => [
                                             [
                                                 'field' => 'username',
-                                                'label' =>'Username required',
-                                                'rules' =>'required|alpha|trim'
+                                                'label' =>'Username',
+                                                'rules' =>'required'
                                             ],
                                             [
                                                 'field' => 'password',
                                                 'label' =>'Password',
-                                                'rules'=> 'required|trim'
+                                                'rules'=> 'required'
                                             ]
                                  ]
+
+
+                                 
 ];

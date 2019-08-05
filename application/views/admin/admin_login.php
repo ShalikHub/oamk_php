@@ -28,14 +28,14 @@ body{
 
  <tr>
     <td width="230">admin password </td>
-    <td><?php echo form_password(['name'=>'password','class'=>'form-control','placeholder'=>'password']); ?></td>
+    <td><?php echo form_password(['name'=>'password','class'=>'form-control','placeholder'=>'password','value'=>set_value('username')]); ?></td>
   </tr>
    <tr>
 
 <div class="form-group">
   <div class="col-lg-10 col-lg-offset-2">
     <td colspan="2" align="center">
- <!--<button class="btn btn-primary"type="submit" name="login" value="Login"/>submit</td></button><br> -->
+ <!-- <button class="btn btn-primary"type="submit" name="login" value="Login"/>submit</td></button><br> -->
  <?php echo form_submit(['name'=>'submit','value'=>'login','class'=>'btn btn-primary']) ?>
  <?php echo form_reset(['name'=>'reset','value'=>'reset','class'=>'btn btn-primary']) ?>
  <!--<button type="reset" class="btn bth-default">cancel</button> -->
@@ -47,4 +47,6 @@ body{
  </form>
  <span class="float-center"><a href="<?= base_url() . 'index.php/admin/login/admin_registration'; ?>" class="btn btn-primary"><h1>you haven't an account yet? click here to register <h1></a></span>
 </body>
+<?php  echo validation_errors(); ?>
+
 </html>
