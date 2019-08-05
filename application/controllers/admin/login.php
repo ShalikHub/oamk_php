@@ -15,12 +15,31 @@ class Login extends CI_Controller {
         $session = $this->session->userdata('is_loggged_in');
         $this->load->database();
         $this->load->library('session');
-        $this->load->helper('url');
+        $this->load->helper('url', 'form');
         #$this->load->model('Loginmodel');
         #$this->load->model('Registrationmodel');
     }
 
+
     public function index()
+    {
+      $this->load->helper('form');
+      $this->load->view('admin/admin_login');
+    }
+
+    public function admin_login()
+    {
+      $this->load->helper('form');
+      $this->load->view('admin/admin_login');
+        //echo "reahed admin login function";
+    }
+
+
+    public function admin_registration()
+    {
+      $this->load->view('admin/admin_registration');
+    }
+    /*public function index()
     {
 
 if ($this->input->post('admin_registration'))
@@ -144,6 +163,7 @@ function dashboard()
     {
     $this->load->view('admin/dashboard');
     }
-    }
     */
+    }
+
 ?>
