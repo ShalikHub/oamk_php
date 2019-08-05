@@ -78,11 +78,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 class Exam extends CI_Controller {
 
-        public function index()
-        {
-                $this->load->helper(array('form', 'url'));
-                $this->load->model('admin/Exammodel');
 
+  public function __construct()
+	{
+	//call CodeIgniter's default Constructor
+	parent::__construct();
+
+	//load database libray manually
+	$this->load->database();
+  $this->load->model('Exam_model');
+  //$this->load->model('admin/Exammodel');
+
+}
+
+        public function savedata()
+        {
+                //$this->load->helper(array('form', 'url'));
+                //$this->load->model('admin/Exammodel');
+                $this->load->view('admin/exam');
+
+
+                if($this->input->post('submit')){
+                  $q=$this->input->post('question');
+                  $c1=$this->input->post('choice1');
+                  $c2=$this->input->post('choice2');
+                  $c3=$this->input->post('choice3');
+                  $a=$this->input->post('answer');
+
+                }
                 $this->load->library('form_validation');
                 $this->form_validation->set_rules('question', 'question', 'required');
                 $this->form_validation->set_rules('choice1', 'choice1', 'required');
@@ -91,17 +114,12 @@ class Exam extends CI_Controller {
                 $this->form_validation->set_rules('answer', 'answer', 'required');
                 //$this->form_validation->set_rules('username', 'Username', 'required');
 
+                $this->load->Exam_Model->saverecords($q,$c1,$c2,$c3,$a);
+                echo "records save successfully";
 
-                if ($this->form_validation->run() == FALSE)
-                {
-                        $this->load->view('admin/exam');
-                }
-                else
-                {
-                        $this->load->view('admin/formsuccess');
                 }
         }
-}
+
 
 
 

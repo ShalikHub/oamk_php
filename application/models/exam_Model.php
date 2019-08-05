@@ -2,7 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-Class Exammodel extends CI_Model{
+Class Exam_Model extends CI_Model{
+
+  /*
 
   //public //
 
@@ -49,6 +51,17 @@ Class Exammodel extends CI_Model{
 
    $query=$this->db->insert('geography',$data);
  }
+*/
+function saverecords($question,$choice1,$choice2,$choice3,$answer)
+{
+  $query="insert into geography values('','$question','$choice1','$choice2','$choice3','$answer')";
+  $this->db->query($query);
 }
+
+
+
+}
+
+
 
 ?>
