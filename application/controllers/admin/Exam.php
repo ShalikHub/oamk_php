@@ -135,7 +135,8 @@ class Exam extends CI_controller{
       $session = $this->session->userdata('is_loggged_in');
       $this->load->database();
       $this->load->library('session');
-      $this->load->helper('url', 'form');
+      $this->load->helper('url', 'form', 'form_validation');
+      $this->load->model('exam_model');
       #$this->load->model('Loginmodel');
       #$this->load->model('Registrationmodel');
   }
@@ -143,14 +144,14 @@ class Exam extends CI_controller{
   public function index()
   {
     $this->load->helper('form');
-    $this->load->view('admin/exam');
+    //$this->load->view('admin/exam');
   }
 
 public function create_exam()
 {
   $this->load->library('form_validation');
   $this->load->helper('form');
-  $this->load->view('admin/exam');
+  //$this->load->view('admin/exam');
 
   $this->form_validation->set_rules('question','question', 'required');
   $this->form_validation->set_rules('choice1','choice1', 'required');
@@ -158,9 +159,12 @@ public function create_exam()
   $this->form_validation->set_rules('choice3','choice3', 'required');
   $this->form_validation->set_rules('answer','answer', 'required');
 
-  if ($this->form_validation->run() == FALSE) {
-  $this->load->view('admin/exam');
+
+  if ($this->form_validation->run() == FALSE) {
+$this->load->view('admin/exam');
 } else {
+
+
   $data = array(
     'question' => $this->input->post('question'),
     'choice1' => $this->input->post('choice1'),
@@ -171,24 +175,16 @@ public function create_exam()
 
   //take data to do model
 
-$this->
+$this->exam_model->create_exam($data);
+$data['message'] = 'Data Inserted Successfully';
+
+// VIEW LOADING
+
+$this->load->view('admin/exam', $data);
+
+}
 }
 
 }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>

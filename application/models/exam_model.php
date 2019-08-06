@@ -2,7 +2,18 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-Class Exam_Model extends CI_Model{
+Class exam_model extends CI_Model{
+
+  function __construct(){
+    parent::__construct();
+  }
+
+  function create_exam($data){
+  $this->db->insert('geography', $data);
+  }
+
+}
+
 
   /*
 
@@ -52,15 +63,7 @@ Class Exam_Model extends CI_Model{
    $query=$this->db->insert('geography',$data);
  }
 */
-function saverecords($question,$choice1,$choice2,$choice3,$answer)
-{
-  $query= "INSERT into geography values('','$question','$choice1','$choice2','$choice3','$answer')";
-  $this->db->query($query);
-}
 
-
-
-}
 
 
 

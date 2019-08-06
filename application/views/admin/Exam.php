@@ -5,6 +5,8 @@
 <style type="text/css">
 body{
   background-color: #3EB650;
+
+
 }
 </style>
 
@@ -20,8 +22,8 @@ body{
     </tr>
 
     <tr>
-      <td>question</td>
-      <td><?php echo form_input(['name'=>'question','class'=>'form-control','placeholder'=>'question']); ?></td>
+      <td width="220" height="100">question</td>
+      <td width="180" height="60" ><?php echo form_input(['name'=>'question','class'=>'form-control','placeholder'=>'question']); ?></td>
 
     </tr>
 

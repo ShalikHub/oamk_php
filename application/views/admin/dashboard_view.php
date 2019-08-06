@@ -63,7 +63,7 @@ ul {
         </nav>
 
         <div>
-       		<button type="button">START creating question</button>
+       		<li><a href="<?php echo base_url('index.php/admin/exam/create_exam'); ?>">create exam</a></li>
        	 </div>
 
 
