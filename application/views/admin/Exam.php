@@ -1,76 +1,65 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');?>
-
-<!--
-<!doctype html>
-<html>
- <body>
-
-   <?php echo validation_errors(); ?>
-
-   <form method='post' action='<?= base_url(); ?>'>
-
-     <table>
-       <tr>
-         <td>question</td>
-         <td><input type='text' name='txt_question' placeholder="question"></td>
-       </tr>
-       <tr>
-         <td>choice 1</td>
-         <td><input type='text' name='txt_choice1' placeholder="choice1"></td>
-       </tr>
-
-       <tr>
-         <td>choice 2</td>
-         <td><input type='text' name='txt_choice2' placeholder="choice2"></td>
-       </tr>
-       <tr>
-         <td>choice 3</td>
-         <td><input type='text' name='txt_choice3' placeholder="choice3"></td>
-       </tr>
-       <tr>
-         <td>answer</td>
-         <td><input type='text' name='txt_answer' placeholder="answer"></td>
-       </tr>
-       <tr>
-         <td>&nbsp;submit</td>
-         <td><input type='submit' name='submit' value='Submit'></td>
-       </tr>
-    </table>
-
-   </form>
- </body>
-</html>
--->
-
-
+<!DOCTYPE html>
 <html>
 <head>
-<title>My Form</title>
+<title>question creating</title>
+<style type="text/css">
+body{
+  background-color: #3EB650;
+}
+</style>
+
 </head>
 <body>
+  <form class="form-horizontal" method="post">
+    <?php echo form_open('admin/Exam/create_exam');?>
+  <table width="600" align="center" border="1" cellspacing="5" cellpadding="5">
 
-<?php echo validation_errors(); ?>
+    <tr>
+      <td colspan="2"><?php echo @$error; ?></td>
 
-<?php echo form_open('form'); ?>
+    </tr>
 
-<h5>question</h5>
-<input type="text" name="question" value="<?php echo set_value('question'); ?>" size="50" />
+    <tr>
+      <td>question</td>
+      <td><?php echo form_input(['name'=>'question','class'=>'form-control','placeholder'=>'question']); ?></td>
 
-<h5>choice1</h5>
-<input type="text" name="choice1" value="<?php echo set_value('choice1'); ?>" size="50" />
+    </tr>
 
-<h5>choice2</h5>
-<input type="text" name="choice2" value="<?php echo set_value('choice3'); ?>" size="50" />
+    <tr>
+       <td width="220">choice1</td>
+       <td><?php echo form_input(['name'=>'choice1','class'=>'form-control','placeholder'=>'choice1']);  ?></td>
+    </tr>
 
-<h5>choice3</h5>
-<input type="text" name="choice3" value="<?php echo set_value('answer'); ?>" size="50" />
+    <tr>
+       <td width="220">choice2</td>
+       <td><?php echo form_input(['name'=>'choice2','class'=>'form-control','placeholder'=>'choice2']);  ?></td>
+    </tr>
 
-<h5>answer</h5>
-<input type="text" name="answer" value="" size="50" />
+    <tr>
+       <td width="220">choice3</td>
+       <td><?php echo form_input(['name'=>'choice3','class'=>'form-control','placeholder'=>'choice3']);  ?></td>
+    </tr>
 
-<div><input type="submit" value="Submit" /></div>
+    <tr>
+       <td width="220">answer</td>
+       <td><?php echo form_input(['name'=>'answer','class'=>'form-control','placeholder'=>'answer']);  ?></td>
+    </tr>
+    <div class="form-group">
+     <div class="col-lg-10 col-lg-offset-2">
+       <td colspan="2" align="center">
+    <!-- <button class="btn btn-primary"type="submit" name="login" value="Login"/>submit</td></button><br> -->
+    <?php echo form_submit(['name'=>'submit','value'=>'submit','class'=>'btn btn-primary']) ?>
 
-</form>
+    <!--<button type="reset" class="btn bth-default">cancel</button> -->
+   </div>
+   </div>
+     </tr>
+
+
+
+  </table>
 
 </body>
+
+
 </html>

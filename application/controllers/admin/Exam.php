@@ -1,5 +1,8 @@
 <?php
 
+
+/*
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*class Exam extends CI_Controller {
@@ -76,6 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 }
 */
+/*
 class Exam extends CI_Controller {
 
 
@@ -119,6 +123,70 @@ class Exam extends CI_Controller {
 
                 }
         }
+
+
+*/
+
+class Exam extends CI_controller{
+
+
+  public function __construct() {
+      parent::__construct();
+      $session = $this->session->userdata('is_loggged_in');
+      $this->load->database();
+      $this->load->library('session');
+      $this->load->helper('url', 'form');
+      #$this->load->model('Loginmodel');
+      #$this->load->model('Registrationmodel');
+  }
+
+  public function index()
+  {
+    $this->load->helper('form');
+    $this->load->view('admin/exam');
+  }
+
+public function create_exam()
+{
+  $this->load->library('form_validation');
+  $this->load->helper('form');
+  $this->load->view('admin/exam');
+
+  $this->form_validation->set_rules('question','question', 'required');
+  $this->form_validation->set_rules('choice1','choice1', 'required');
+  $this->form_validation->set_rules('choice2','choice2', 'required');
+  $this->form_validation->set_rules('choice3','choice3', 'required');
+  $this->form_validation->set_rules('answer','answer', 'required');
+
+  if ($this->form_validation->run() == FALSE) {
+  $this->load->view('admin/exam');
+} else {
+  $data = array(
+    'question' => $this->input->post('question'),
+    'choice1' => $this->input->post('choice1'),
+    'choice2' => $this->input->post('choice2'),
+    'choice3' => $this->input->post('choice3'),
+    'answer' => $this->input->post('answer'),
+  );
+
+  //take data to do model
+
+$this->
+}
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
