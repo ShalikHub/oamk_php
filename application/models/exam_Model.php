@@ -54,7 +54,7 @@ Class Exam_Model extends CI_Model{
 */
 function saverecords($question,$choice1,$choice2,$choice3,$answer)
 {
-  $query="insert into geography values('','$question','$choice1','$choice2','$choice3','$answer')";
+  $query= "INSERT into geography values('','$question','$choice1','$choice2','$choice3','$answer')";
   $this->db->query($query);
 }
 

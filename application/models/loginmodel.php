@@ -6,25 +6,35 @@
  * and open the template in the editor.
  */
 
-class Loginmodel extends CI_Model {
+Class Loginmodel extends CI_Model {
 
-  function __construct() {
-        parent::__construct();
-        $this->load->database();
+  public function login_valid($username, $password)
+  {
+    //
+    $password = md5($password);
+    $q = $this->db->where(['username'=>$username,'password'=>$password])
+                  ->get('admin');
+
+
+
+    if ($q->num_rows) {
+
+        return $q->row()->id;
+      //return TRUE;
+     } else {
+         return FALSE;
+     }
     }
 
-    public function login_valid($username, $password) {
 
-        $password = md5($password);
-        $q = $this->db->where(['admin_name' => $admin_name, 'admin_password' => $admin_password])
-                ->get('admin');
-        if ($q->num_rows) {
-
-            return $q->row()->id;
-              #return TRUE .... ;
-        } else {
-            return FALSE;
-        }
-    }
-
+    
 }
+
+
+   //return TRUE;
+
+    //$this->db->query('SELECT * FROM admin where username * $username and password * $password');
+
+    //count($q->rows)
+
+    ?>

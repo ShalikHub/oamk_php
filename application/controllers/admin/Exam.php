@@ -86,7 +86,7 @@ class Exam extends CI_Controller {
 
 	//load database libray manually
 	$this->load->database();
-  $this->load->model('Exam_model');
+  $this->load->model('admin/Exam_Model');
   //$this->load->model('admin/Exammodel');
 
 }

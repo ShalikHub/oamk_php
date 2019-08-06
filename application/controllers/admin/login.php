@@ -24,7 +24,7 @@ class Login extends CI_Controller {
     public function index()
     {
       $this->load->helper('form');
-      $this->load->view('admin/admin_login');
+      //$this->load->view('admin/admin_login');
     }
 
     public function admin_login()
@@ -36,25 +36,66 @@ class Login extends CI_Controller {
       $this->form_validation->set_rules('username','User Name', 'required');
       $this->form_validation->set_rules('password','Password', 'required');
 
-      if($this->form_validation->run() ){ //validation passes
-        echo "validation sucessfull";
-        $this->load->view('admin/dashboard_view');
+      if($this->form_validation->run() ){
+
+        $username= $this->input->post('username');
+        $password= $this->input->post('password');
+
+        $this->load->model('Loginmodel');
+
+        if($this->Loginmodel->login_valid($username, $password) ){
+
+        }
+        //echo "username: $username and password: $password";
+
+        //validation passes
+        //echo "validation sucessfull";
+        redirect('admin/dashboard');
       } else {
 
-        $this->load->view('admin/admin_login');
+        //$this->load->view('admin/admin_login');
 
         echo "validation failed";
 
-        echo validation_errors();
+        //echo validation_errors();
       }
         //echo "reahed admin login function";
     }
 
-
+/*
     public function admin_registration()
     {
+      $this->load->library('form_validation');
+      $this->load->helper('form');
       $this->load->view('admin/admin_registration');
+
+      $this->form_validation->set_rules('username','User Name', 'required');
+      $this->form_validation->set_rules('password','Password', 'required');
     }
+
+
+
+    if($this->form_validation->run() ){
+
+      $username= $this->input->post('username');
+      $password= $this->input->post('password');
+
+      $this->load->model('Loginmodel');
+
+      if($this->Loginmodel->login_valid($username, $password) ){
+
+      }
+
+
+      redirect(admin/login){
+
+
+      }
+
+      else {
+        echo "check your validation"
+      }
+    }  */
     /*public function index()
     {
 
