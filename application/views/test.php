@@ -5,7 +5,7 @@
   <body>
 
 
-    <h4>Display Records From Database Using Codeigniter</h4>
+    <h4>exam</h4>
     <table>
      <tr>
       <td><strong>question</strong></td>
@@ -18,13 +18,17 @@
 
 
     </tr>
-     <?php foreach($tests as $post){?>
+
+ <?php
+ $i=1;
+ foreach($tests as $row){?>
      <tr>
-         <td><?php echo $post->question;?></td>
-         <td><?php echo $post->choice1;?></td>
-         <td><?php echo $post->choice2;?></td>
-         <td><?php echo $post->choice3;?></td>
-         <td><?php echo $post->answer;?></td>
+         <td><?php echo $row->question;?></td>
+         <td><?php echo $row->choice1;?></td>
+         <td><?php echo $row->choice2;?></td>
+         <td><?php echo $row->choice3;?></td>
+         <td><?php echo $row->answer;?></td>
+         
       </tr>
      <?php }?>
    </table>
