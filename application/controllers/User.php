@@ -66,5 +66,16 @@ function dashboard()
 {
 $this->load->view('dashboard');
 }
+
+function header()
+{
+  $this->load->view('header');
+}
+
+function footer()
+{
+  $this->load->view('footer');
+}
+
 }
 ?>

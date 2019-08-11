@@ -24,62 +24,10 @@ body{
 
 <body>
  <h1>Welcome to your dashboard...</h1>
+<div id="container">
+  <h1>attemp your multiple choice exam</h1>
 
- <div>
-		<button type="button">START</button>
-	 </div>
-
- <div class="container">
-	<div class="row">
-		<form method="post" class="form-horizontal col-md-6 col-md-offset-3" action="">
-		<h2>multiple choice exam application</h2>
-			<div class="form-group">
-			    <label for="input1" class="col-sm-2 control-label">question categories</label>
-			    <div class="col-sm-10">
-			      <input type="number" name="id"  class="form-control" id="input1" placeholder="question_id" />
-			    </div>
-			</div>
-
-			<div class="form-group">
-			    <label for="input1" class="col-sm-2 control-label">question</label>
-			    <div class="col-sm-10">
-			      <input type="text" name="question"  class="form-control" id="input1" placeholder="question" />
-			    </div>
-			</div>
-
-
-
-			<div class="form-group" class="form-group">
-			<label for="input1" class="col-sm-2 control-label">options</label>
-			<div class="col-sm-10">
-			  <label>
-			    <input type="text" name="choice1" class="form-control" id="input1" > choice 1
-			  </label>
-			  	  <label>
-			    <input type="text" name="choice2" class="form-control" id="input1"> choice 2
-			  </label>
-
-        <label>
-      <input type="text" name="choice3"  class="form-control" id="input1"> choice 3
-    </label>
-			</div>
-			</div>
-
-    <div class="form-group">
-      <label>
-    <input type="text" name="answer"  class="form-control" id="input1"> Answer</label>
-    <div class="col-sm-10">
-
-    </div>
-
-			<div class="form-group">
-
-			<input type="submit" class="btn btn-primary col-md-2 col-md-offset-10" value="submit" />
-		</form>
-	</div>
-</div>
-
-
+<span class="float-center"><a href="<?= base_url() . 'index.php/test/displaytest'; ?>" class="btn btn-primary"><h1>here you will find your test <h1></a></span>
 
 
 

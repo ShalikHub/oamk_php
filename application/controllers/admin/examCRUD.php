@@ -3,11 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class examCRUD extends CI_Controller {
 
 
-   public $<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-class examCRUD extends CI_Controller {
-
-
    public $examCRUD;
 
 
